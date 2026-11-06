@@ -1,0 +1,22 @@
+Test 1: search for FAILED
+Command: log_parser.exe security.log FAILED
+
+File: security.log
+Keyword: FAILED
+
+Line 2: 2026-11-06 08:12:13 FAILED Login attempt from 192.168.1.20
+Line 5: 2026-11-06 08:17:20 FAILED Password for user guest
+Line 8: 2026-11-06 08:25:30 FAILED Login attempt from 192.168.1.21
+
+Total alerts: 3
+
+Test 2: search for 404
+Command: log_parser.exe security.log 404
+
+File: security.log
+Keyword: 404
+
+Line 4: 2026-11-06 08:15:44 ERROR 404 GET /private
+Line 7: 2026-11-06 08:22:10 WARNING 404 GET /backup.zip
+
+Total alerts: 2
